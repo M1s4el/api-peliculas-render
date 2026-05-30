@@ -21,6 +21,10 @@ app.use(logger);
 // Enrutamiento principal
 app.use('/peliculas', rutapeliculas);
 
+app.get('/', async (req, res) => {
+res.send('API funcionando...'); 
+});
+
 app.listen(port, () => {
     console.log(`Servidor iniciado en puerto ${port}`);
 });
